@@ -2,10 +2,10 @@ library(EdiToOmop)
 
 ##Environment Settings
 connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = "sql server",
-                                                                server = "10.19.10.248",
-                                                                user = "sa",
-                                                                password = "yonsei202208!@",
-                                                                port = "1433",
+                                                                server = "",
+                                                                user = "",
+                                                                password = "",
+                                                                port = "",
 \                                                               pathToDriver = "~/jdbc"
 )
 

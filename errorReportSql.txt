@@ -1,0 +1,30 @@
+DBMS:
+sql server
+
+Error:
+com.microsoft.sqlserver.jdbc.SQLServerException: 개체 이름 'dbo.edi_voca_table'이(가) 유효하지 않습니다.
+
+SQL:
+UPDATE EDI_OMOP.dbo.edi_voca_table
+        SET VALID_END_DATE = '2019-10-31', INVALID_REASON = 'D'
+        FROM dbo.edi_voca_table as existing_table
+        WHERE existing_table.concept_code NOT IN (SELECT concept_code from #temp_table)
+          AND existing_table.domain_id IN ('Device')
+
+R version:
+R version 4.1.2 (2021-11-01)
+
+Platform:
+x86_64-pc-linux-gnu
+
+Attached base packages:
+- stats
+- graphics
+- grDevices
+- utils
+- datasets
+- methods
+- base
+
+Other attached packages:
+- EdiToOmop (0.1.0)
